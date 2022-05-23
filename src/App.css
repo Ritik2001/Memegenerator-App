@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@400;700&display=swap');
+
+:root{
+ --ff-main-content: Karla, sans-serif;
+  --ff-secondary: Inter, sans-serif;
+  --clr-primarygradient: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,body{
+  font-family: var(--ff-main-content);
+  margin:0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*,
+*::before,
+*::after{
+
+  box-sizing: border-box;
+}
+.titleBar{
+
+  display: flex;
+  background: var(--clr-primarygradient);
+  color: white;
+  align-items: center;
+  gap: 1rem;
+  padding:1rem 2rem;
+
+}
+.appTitle{
+
+  letter-spacing: -0.1em;
+
+}
+.projectInfo{
+  margin-left: auto;
+  font-family: var(--ff-secondary);
+}
+.trollImage{
+  width: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputFieldsContainer{
+
+  display: flex;
+  gap:2rem;
+}
+.inputFieldsContainer> *{
+  width:100%;
+  padding: 1rem ;
+  border: 1px solid #D5D4D8;
+  border-radius: 6px;
+  font-family: var(--ff-main-content);
+  text-indent: 4px;
+}
+
+.interactiveContainer{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding : 2rem 2.5rem;
+  gap: 2rem;
+
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.pickButton{
+  
+  padding: 1rem 2rem;
+  background: var(--clr-primarygradient);
+  border-radius: 6px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-family: var(--ff-main-content);
+  font-weight: 700;
+  font-size: 1.16rem;
+  letter-spacing: -0.1em;
+  width: 100%;
+  cursor: pointer;
 }
